@@ -40,8 +40,11 @@
             }
        },
        created (){
-       	 this.axios.get('./static/a.txt').then((r) => {
-			    this.msg = r.data;
+       	 let that = this;
+       	 	axios.get('./static/a.txt')
+       	 	.then(function(r){
+       	 		//alert(this)
+			   that.msg = r.data;
 			}).catch((error) => {
 			    console.error(error)
 			})
