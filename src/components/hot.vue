@@ -4,7 +4,7 @@
 		<h3>{{msg}}</h3>
 		 <div>
 
-	        <p class="button" @click="jump('helloword')"> 跳转至helloword页面 </p>
+	        <!--<p class="button" @click="jump('Helloword')"> 跳转至helloword页面1 </p>-->
 	
 	    </div>
 		<a href="javascript:;">
@@ -25,6 +25,8 @@
 	</div>
 </template>
 <script type="text/javascript">
+	import axios from 'axios'
+	
 	export default{
 		name:'Hot',
 		data(){
@@ -36,7 +38,14 @@
             jump:function (e) {
                     this.$router.push(e);
             }
-        }
+       },
+       created (){
+       	 this.axios.get('./static/a.txt').then((r) => {
+			    this.msg = r.data;
+			}).catch((error) => {
+			    console.error(error)
+			})
+       }
 	}
 </script>
 <style type="text/css" scoped>

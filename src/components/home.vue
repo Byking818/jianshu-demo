@@ -13,11 +13,14 @@
 				<li><a href="javascript:;">第时间收到作者文章更新</a></li>
 			</ul>
 		</div>
+		<hot></hot>
+		<list></list>
 	</div>
 	<!--<hot></hot>-->
 </template>
 <script>
-//	import Hot from './hot'
+	import Hot from './hot'
+	import List from './list'
 	export default{
 		name:'Home',
 		data(){
@@ -25,9 +28,9 @@
 				msg:''
 			}
 		},
-//		components:{
-//		   Hot
-//		}
+		components:{
+		   Hot,List
+		}
 	}
 </script>
 <style type="text/css" scoped>

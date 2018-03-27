@@ -8,7 +8,7 @@
 					<a href="javascript:;" class="a-name">{{site.name}}</a>
 				</div>
 				<img class="list_img" :src="site.list_img" alt="" />
-				<h3>{{site.title}}</h3>
+				<h3><router-link to="/details">{{site.title}}</router-link></h3>
 				<div class="border_bottom"></div>
 			</li>
 		</ul>
